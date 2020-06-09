@@ -158,10 +158,6 @@ if ($proceed == false) {
                 $row->addTextField('officialName')->required()->maxLength(150)->setTitle('Please enter full name as shown in ID documents');
 
             $row = $form->addRow();
-                $row->addLabel('nameInCharacters', __('Name In Characters'))->description(__('Chinese or other character-based name.'));
-                $row->addTextField('nameInCharacters')->maxLength(20);
-
-            $row = $form->addRow();
                 $row->addLabel('gender', __('Gender'));
                 $row->addSelectGender('gender')->required();
 
@@ -175,15 +171,7 @@ if ($proceed == false) {
                 $row->addLabel('languageFirst', __('First Language'))->description(__('Student\'s native/first/mother language.'));
                 $row->addSelectLanguage('languageFirst')->required();
 
-            $row = $form->addRow();
-                $row->addLabel('languageSecond', __('Second Language'));
-                $row->addSelectLanguage('languageSecond')->placeholder('');
-
-            $row = $form->addRow();
-                $row->addLabel('languageThird', __('Third Language'));
-                $row->addSelectLanguage('languageThird')->placeholder('');
-
-            $row = $form->addRow();
+           $row = $form->addRow();
                 $row->addLabel('countryOfBirth', __('Country of Birth'));
                 $row->addSelectCountry('countryOfBirth')->required();
 
